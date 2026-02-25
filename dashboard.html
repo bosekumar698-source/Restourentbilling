@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Billing Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <script src="dashboard.js" defer></script>
+  <script src="sidebar.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <aside class="sidebar">
+    <div class="logo">RestroMaster</div>
+    <nav>
+      <ul id="navList">
+        <li class="active" data-section="dashboard">Dashboard</li>
+        <li onclick="location.href='billing.html'">Billing</li>
+        <li onclick="location.href='orders.html'">Orders</li>
+        <li onclick="location.href='sales-report.html'">Sales Report</li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div class="title">Billing Dashboard</div>
+      <div class="user-info">
+        <img src="https://i.pravatar.cc/32" alt="User" />
+        <span>Admin</span>
+        <button id="logoutBtn" title="Logout" aria-label="Logout">Logout</button>
+      </div>
+    </header>
+
+    <section class="cards" id="cardsContainer">
+      <!-- Cards inserted dynamically -->
+    </section>
+
+    <section class="tables" id="tablesContainer">
+      <!-- Tables inserted dynamically -->
+    </section>
+
+  </main>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,507 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7fc;
+  color: #333;
+}
+
+/* Container and sidebar */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 220px;
+  background-color: #1f2d3d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.sidebar .logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 15px 25px;
+  border-bottom: 1px solid #324759;
+  margin-bottom: 15px;
+  color: #4cd137;
+  user-select: none;
+}
+.sidebar nav ul {
+  list-style: none;
+}
+.sidebar nav ul li {
+  padding: 14px 25px;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+  user-select: none;
+}
+.sidebar nav ul li:hover,
+.sidebar nav ul li.active {
+  background-color: #324759;
+  border-left: 4px solid #4cd137;
+}
+
+/* Main content */
+.main-content {
+  flex-grow: 1;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4cd137;
+  padding: 15px 25px;
+  border-radius: 8px;
+  color: white;
+  margin-bottom: 25px;
+}
+.topbar .title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.topbar .user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+.topbar .user-info img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.topbar .user-info button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0 5px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+.card {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.05);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 200px;
+}
+.card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+}
+.card-content {
+  flex-grow: 1;
+}
+.card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 6px;
+}
+.card-value {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.card.sales .card-icon {
+  background-color: #3b82f6; /* blue */
+}
+.card.orders .card-icon {
+  background-color: #ef4444; /* red */
+}
+.card.customers .card-icon {
+  background-color: #10b981; /* green */
+}
+.card.revenue .card-icon {
+  background-color: #f59e0b; /* yellow/orange */
+}
+
+/* Tables */
+.tables {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.table-wrapper {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  flex: 1 1 600px;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+}
+.table-wrapper h3 {
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #222;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table thead tr {
+  background-color: #e5e7eb;
+}
+table thead th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #555;
+  cursor: pointer;
+}
+table tbody tr:hover {
+  background-color: #f9fafb;
+}
+table tbody td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Product images */
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product-info img {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.product-name {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Action icons */
+.action-icons {
+  display: flex;
+  gap: 10px;
+}
+.action-icons button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #4b5563;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+.action-icons button:hover {
+  color: #111827;
+}
+/* ================================================== */
+/* ============= MOBILE & TABLET RESPONSIVE ========= */
+/* ================================================== */
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+
+  .container {
+    flex-direction: column;
+  }
+
+  /* Sidebar becomes horizontal bar */
+  .sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+  }
+
+  .sidebar .logo {
+    display: none; /* hide logo on tablet */
+  }
+
+  .sidebar nav ul {
+    display: flex;
+    gap: 10px;
+    padding: 0 5px;
+  }
+
+  .sidebar nav ul li {
+    padding: 8px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  /* Main content padding */
+  .main-content {
+    padding: 15px;
+  }
+
+  /* Topbar adjustments */
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .user-info {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* Cards stacked more vertically */
+  .cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Tables scroll horizontal */
+  .tables {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .table-wrapper {
+    flex: 1 1 100%;
+    overflow-x: auto;
+  }
+}
+
+/* Mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+
+  /* Sidebar smaller and horizontal */
+  .sidebar {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px 0;
+  }
+
+  .sidebar nav ul {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .sidebar nav ul li {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  /* Topbar */
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .user-info {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+
+  #logoutBtn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  /* Cards */
+  .cards {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    min-width: 0;
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 0.85rem;
+  }
+
+  .card-value {
+    font-size: 1.1rem;
+  }
+
+  /* Tables scroll */
+  .tables {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .table-wrapper {
+    flex: 1 1 100%;
+    padding: 15px;
+    overflow-x: auto;
+  }
+
+  table thead th,
+  table tbody td {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+
+  /* Product images smaller */
+  .product-info img {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Actions smaller */
+  .action-icons button {
+    font-size: 0.9rem;
+  }
+
+  /* Forms (billing/sales) */
+  form {
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  form input,
+  form button {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+}
+
+
+/* billing */
+/* Form */
+form {
+  display: grid;
+  gap: 15px;
+  max-width: 400px;
+}
+
+form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+form button {
+  padding: 10px;
+  border: none;
+  background: #1e3c72;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #16305c;
+}
+
+/* Orders */
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th {
+  background: #1e3c72;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+table tr:hover {
+  background: #f1f5ff;
+}
+
+/* Sales-report */
+
+
+/* Form */
+form {
+  display: grid;
+  gap: 15px;
+  max-width: 400px;
+}
+
+form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+form button {
+  padding: 10px;
+  border: none;
+  background: #1e3c72;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #16305c;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th {
+  background: #1e3c72;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+table tr:hover {
+  background: #f1f5ff;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Billing</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">RestroMaster</div>
+    <nav>
+      <ul>
+        <li onclick="location.href='dashboard.html'">Dashboard</li>
+        <li class="active">Billing</li>
+        <li onclick="location.href='orders.html'">Orders</li>
+        <li onclick="location.href='sales-report.html'">Sales Report</li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="topbar">
+      <div class="title">Billing</div>
+    </header>
+
+    <section class="content">
+      <h2>Create Bill</h2>
+
+      <form>
+        <label>Customer Name</label>
+        <input type="text" placeholder="Enter customer name">
+
+        <label>Item Name</label>
+        <input type="text" placeholder="Enter item name">
+
+        <label>Quantity</label>
+        <input type="number" placeholder="Enter quantity">
+
+        <label>Price</label>
+        <input type="number" placeholder="Enter price">
+
+        <button type="submit">Generate Bill</button>
+      </form>
+    </section>
+  </main>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sales Report</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="container">
+
+  <aside class="sidebar">
+    <div class="logo">RestroMaster</div>
+    <nav>
+      <ul>
+        <li onclick="location.href='dashboard.html'">Dashboard</li>
+        <li onclick="location.href='billing.html'">Billing</li>
+        <li onclick="location.href='orders.html'">Orders</li>
+        <li class="active">Sales Report</li>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div class="title">Sales Report</div>
+    </header>
+
+    <section class="content">
+      <h2>Generate Sales Report</h2>
+
+      <form>
+        <label>From Date</label>
+        <input type="date">
+
+        <label>To Date</label>
+        <input type="date">
+
+        <button type="submit">Generate Report</button>
+      </form>
+
+      <br>
+
+      <table border="1" width="100%">
+        <tr>
+          <th>Date</th>
+          <th>Total Orders</th>
+          <th>Total Amount</th>
+        </tr>
+        <tr>
+          <td>01-02-2026</td>
+          <td>15</td>
+          <td>₹10,000</td>
+        </tr>
+      </table>
+
+    </section>
+  </main>
+
+</div>
+
+</body>
+</html>
