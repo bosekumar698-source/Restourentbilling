@@ -1,7 +1,7 @@
 // Logout functionality
 document.getElementById('logoutBtn').addEventListener('click', () => {
   // Redirect to login page
-  window.location.href = 'Index.html';
+  window.location.href = 'index.html';
 });
 
 // // Sidebar navigation highlight and simple content switch (if needed)
@@ -115,5 +115,6 @@ function topSellingRowRenderer(row) {
 
 tablesContainer.appendChild(createTableWrapper("Today's Billing", ['Invoice', 'Order', 'Items', 'Amount'], billingData, billingRowRenderer));
 tablesContainer.appendChild(createTableWrapper("Top Selling Items", ['Product', 'Image', 'Sales', 'Price', 'Action'], topSellingData, topSellingRowRenderer));
+
 
 
